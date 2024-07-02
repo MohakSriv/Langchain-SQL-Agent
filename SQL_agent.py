@@ -8,7 +8,7 @@ from langchain.prompts import PromptTemplate
 from model1 import llm
 #I am using a local llm model, replace this import with your OpenAI api keys
 
-DATABASE_URL = "mysql+mysqlconnector://Mohak:mohak123@localhost/mydatabase"
+DATABASE_URL = "mysql+mysqlconnector://username:pw@localhost/databasename"
 
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
