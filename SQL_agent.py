@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 from langchain.agents import AgentExecutor, Tool
 from langchain.prompts import PromptTemplate
 from model1 import llm
-
+#I am using a local llm model, replace this import with your OpenAI api keys
 
 DATABASE_URL = "mysql+mysqlconnector://Mohak:mohak123@localhost/mydatabase"
 
@@ -46,7 +46,7 @@ print(mydbcontext)
 
 session = SessionLocal()
 
-llm=llm
+llm=llm #define your llm here
 mysql_query_tool = MySQLQueryTool(session=session)
 
 ptemplate = """
